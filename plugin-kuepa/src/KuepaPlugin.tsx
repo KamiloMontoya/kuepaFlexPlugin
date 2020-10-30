@@ -27,7 +27,7 @@ export default class KuepaPlugin extends FlexPlugin {
     flex.CRMContainer
     .defaultProps
     .uriCallback = (task) => task
-    ? `https://panel.kuepa.com/contactosMX/${task.attributes.contact_id}/edit`
+    ? (task.attributes?.contact_id ? `https://panel.kuepa.com/contactosMX/${task.attributes.contact_id}/edit` : `https://panel.kuepa.com/contactosMX/new`)
     : 'https://panel.kuepa.com/cola_llamados'
 
 
