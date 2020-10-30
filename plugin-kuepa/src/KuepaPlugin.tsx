@@ -28,7 +28,7 @@ export default class KuepaPlugin extends FlexPlugin {
     .defaultProps
     .uriCallback = (task) => task
     ? `https://panel.kuepa.com/contactosMX/${task.attributes.contact_id}/edit`
-    : 'https://panel.kuepa.com/'
+    : 'https://panel.kuepa.com/cola_llamados'
 
 
     manager.workerClient.on('reservationCreated', (reservation : any) => {
